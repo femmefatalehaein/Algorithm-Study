@@ -1,6 +1,40 @@
 
 ----------------
- ## 목차
+ ## 사용법
+
+초기 셋팅
+
+```
+git clone URL
+```
+```
+git init
+```
+```
+git remote add origin URL
+```
+```
+git checkout 본인이름 tmp
+```
+
+문제 업데이트시
+```
+git pull origin tmp
+```
+
+***문제 단위별로 커밋 해주세요!!***
+
+```
+git add .
+```
+```
+git commit -m "문제번호"
+```
+```
+git push origin tmp
+```
+-> tmp로 들어가서 본인이 만든 commit -> `create pull request` (tmp->main)
+
  --------------------
 ### [날짜별 알고리즘 문제 정리]
  --------------------
