@@ -5,35 +5,25 @@
 초기 셋팅
 
 ```
-git clone URL
-```
-```
 git init
-```
-```
+git clone URL
 git remote add origin URL
-```
-```
-git checkout 본인이름 tmp
+git checkout-b tmp
 ```
 
-문제 업데이트시
+문제 업데이트시 알림 시 반드시 pull 땡겨주세요 ..!!!!
 ```
 git pull origin tmp
 ```
 
 ***문제 단위별로 커밋 해주세요!!***
-
+한 문제 풀고 꼭 commit하고 push 하기 !!
 ```
 git add .
-```
-```
-git commit -m "문제번호"
-```
-```
+git commit -m "문제이름_본인이름"
 git push origin tmp
 ```
--> tmp로 들어가서 본인이 만든 commit -> `create pull request` (tmp->main)
+-> tmp branch로 들어가서 본인이 만든 commit -> `create pull request` (tmp->main)
 
  --------------------
 ### [날짜별 알고리즘 문제 정리]
