@@ -1,0 +1,67 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution{
+	public static void main(String[] args) throws IOException	{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer stn = null;
+		
+		for(int t = 1; t <= 1; t++) {
+			int n = Integer.parseInt(br.readLine());
+			int arr[][] = new int[n][n];
+			for(int i = 0; i < n; i++) {
+				stn = new StringTokenizer(br.readLine());
+				for(int j = 0; j < n; j++) {
+					arr[i][j] = Integer.parseInt(stn.nextToken());
+				}
+			}
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					System.out.print(arr[i][j] + " ");
+				}
+				System.out.println();
+			}
+			for(int i = 0; i < n; i++) {
+				if(arr[0][i] == 1) {
+					double weight = 1;
+					int count = 0;
+					for(int j = 1; j < n; j++) {
+						int weight2 = 1;
+						if(arr[j][i] == 0) {
+							if(j+count < n) {
+								arr[j+count][i] = 1;
+								arr[j-1-count][i] = 0;
+								weight = weight * 1.9;
+								continue;
+							}
+						}
+						else if(arr[j][i] == 1) {
+							int k = 1;
+							while(true) {
+								if(arr[j+k][i] == 1) {
+									weight2 = weight2 + 1;
+									k++;
+								}
+								else if(arr[j+k][i] == 0) {
+									break;
+								}
+							}
+							if(weight <= weight2) {
+								break;
+							}
+							else if(weight > weight2) {
+								count++;
+							}
+						}
+					}
+				}
+			}
+			for(int i = 0; i < n; i++) {
+				for(int j = 0; j < n; j++) {
+					System.out.print(arr[i][j] + " ");
+				}
+				System.out.println();
+			}
+		}
+	}
+}
