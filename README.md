@@ -5,64 +5,31 @@
 초기 셋팅
 
 ```
-git init
 git clone URL
 git remote add origin URL
-git checkout-b tmp
+git checkout-b "본인이름"
 ```
 
-문제 업데이트시 알림 시 반드시 pull 땡겨주세요 ..!!!!
+문제 업데이트시 반드시 pull 땡겨주세요 ..!!!!
 ```
 git pull origin tmp
 ```
 
 ***문제 단위별로 커밋 해주세요!!***
 한 문제 풀고 꼭 commit하고 push 하기 !!
+
 ```
 git add .
 git commit -m "문제이름_본인이름"
-git push origin tmp
+git push origin "본인이름"
 ```
--> tmp branch로 들어가서 본인이 만든 commit -> `create pull request` (tmp->main)
+→ tmp branch로 들어가서 본인이 만든 commit -> `create pull request` (tmp->main)
 
  --------------------
 ### [날짜별 알고리즘 문제 정리]
  --------------------
-
-- 각 일자별로 알고리즘 문제가 제시됩니다. 
-- 제시되는 문제들은 주로 SWEA, BOJ의 문제입니다. 
-- 진도와 관련 된 문제 최소 1문제를 포함하여 다른 유형의 문제가 제시될 수 있습니다.
-
+24.08.19
 ---------------------
-24.08.05
----------------------
-1. BJ 2567 색종이2 (Main_2567_이름.java)
-2. BJ 13335 트럽 (Main_13335_이름.java)
-
----------------------
-24.08.13
----------------------
-1. SWEA 6808. 규영이와 인영이의 카드 게임 (Solution_6808_이름.java)
-2. SWEA 1210. Ladder1 (Solution_1210_이름.java)
-3. [추가 문제]BJ 15649 N과 M(1) (Main_15649_이름.java)
-4. [추가 문제]BJ 2529 부등호 (Main_2529_이름.java)
-
----------------------
-24.08.14
----------------------
-1. SWEA. 5215 햄버거 다이어트 (Solution_5215_이름.java)
-2. SWEA. 2001 파리퇴치 (Solution_2001_이름.java)
-3. BJ. 11659 구간 합 구하기4 (Main_11659_이름.java) >>MM에 참고용 PDF있음
-4. [추가 문제]BJ. 11660 구간 합 구하기5 (Main_11660_이름.java)
-5. [추가 문제]BJ. 15650 N과 M(2) (Main_15650_이름.java)
-
----------------------
-24.08.16
----------------------
-1. SWEA. 3421 수제 버거 장인 (Solution_3421_이름.java)
-2. BJ. 2961 도영이가 만든 맛있는 음식 (Main_2961_이름.java)
-3. BJ. 12891 DNA 비밀번호 (Main_12891_이름.java)
-4. [추가 문제] SWEA. 5215 햄버거 다이어트 (Solution_5215_이름.java) 
-		ㄴ부분집합 코드로 변경해보기
-5. [추가 문제] BJ. 2023 신기한 소수 (Main_2023_이름.java)
+- 감시피하기
+- 인구이동
 
