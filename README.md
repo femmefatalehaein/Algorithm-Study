@@ -8,7 +8,7 @@
 git init
 git clone URL
 git remote add origin URL
-git checkout-b tmp
+git checkout-b 본인이름
 ```
 
 문제 업데이트시 알림 시 반드시 pull 땡겨주세요 ..!!!!
@@ -21,9 +21,9 @@ git pull origin tmp
 ```
 git add .
 git commit -m "문제이름_본인이름"
-git push origin tmp
+git push origin 본인이름
 ```
--> tmp branch로 들어가서 본인이 만든 commit -> `create pull request` (tmp->main)
+-> 본인이름 branch로 들어가서 본인이 만든 commit -> `create pull request` (본인이름->main)
 
  --------------------
 ### [날짜별 알고리즘 문제 정리]
