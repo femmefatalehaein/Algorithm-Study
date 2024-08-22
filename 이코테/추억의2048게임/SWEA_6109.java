@@ -3,7 +3,7 @@ package algo_Java;
 import java.util.*;
 import java.io.*;
 
-public class Solution_6109_¹®¼­ºó {
+public class SWEA_6109 {
 	static int N;
 	static String S;
 	static int[][] in_arr;
@@ -27,34 +27,34 @@ public class Solution_6109_¹®¼­ºó {
 				for (int j = 0; j < N; j++) {
 					in_arr[i][j] = Integer.parseInt(st.nextToken());
 				}
-			} // ÀÔ·Â ³¡
+			} // ì…ë ¥ ë
 
 			switch (S) {
 			case "up":
-				for (int j = 0; j < N; j++) { // ¿­ ¿ì¼± Å½»ö
-					for (int i = 0; i < N - 1; i++) { // À§ºÎÅÍ ¾Æ·¡·Î
-						if (in_arr[i][j] == 0) // ÇöÀç °ªÀÌ 0ÀÌ¸é ÆĞ½º
+				for (int j = 0; j < N; j++) { // ì—´ ìš°ì„  íƒìƒ‰
+					for (int i = 0; i < N - 1; i++) { // ìœ„ë¶€í„° ì•„ë˜ë¡œ
+						if (in_arr[i][j] == 0) // í˜„ì¬ ê°’ì´ 0ì´ë©´ íŒ¨ìŠ¤
 							continue;
 
 						int idx = i + 1;
 
-						while (in_arr[idx][j] == 0) { // ºñ±³ÇÒ °ªÀÌ 0ÀÌ¸é ´ÙÀ½°ª
-							if (idx == N - 1) // ³¡±îÁö Å½»ö
+						while (in_arr[idx][j] == 0) { // ë¹„êµí•  ê°’ì´ 0ì´ë©´ ë‹¤ìŒê°’
+							if (idx == N - 1) // ëê¹Œì§€ íƒìƒ‰
 								break;
 							idx++;
 						}
 
-						if (in_arr[idx][j] == 0) // ºñ±³ÇÒ °ªÀÌ 0ÀÌ¸é ÆĞ½º
+						if (in_arr[idx][j] == 0) // ë¹„êµí•  ê°’ì´ 0ì´ë©´ íŒ¨ìŠ¤
 							continue;
 
-						if (in_arr[i][j] == in_arr[idx][j]) { // ÇÕÄ¡°í Áö¿ì°í
+						if (in_arr[i][j] == in_arr[idx][j]) { // í•©ì¹˜ê³  ì§€ìš°ê³ 
 							in_arr[i][j] += in_arr[i][j];
 							in_arr[idx][j] = 0;
 							i = idx;
 						}
 					}
 					int cur = 0;
-					for (int i = 0; i < N; i++) { // °á°ú ÀÔ·Â
+					for (int i = 0; i < N; i++) { // ê²°ê³¼ ì…ë ¥
 						if (in_arr[i][j] != 0) {
 							out_arr[cur++][j] = in_arr[i][j];
 						}
@@ -63,30 +63,30 @@ public class Solution_6109_¹®¼­ºó {
 				break;
 
 			case "down":
-				for (int j = 0; j < N; j++) { // ¿­ ¿ì¼± Å½»ö
-					for (int i = N - 1; i > 0; i--) { // ¾Æ·¡ºÎÅÍ À§·Î
-						if (in_arr[i][j] == 0) // ÇöÀç °ªÀÌ 0ÀÌ¸é ÆĞ½º
+				for (int j = 0; j < N; j++) { // ì—´ ìš°ì„  íƒìƒ‰
+					for (int i = N - 1; i > 0; i--) { // ì•„ë˜ë¶€í„° ìœ„ë¡œ
+						if (in_arr[i][j] == 0) // í˜„ì¬ ê°’ì´ 0ì´ë©´ íŒ¨ìŠ¤
 							continue;
 
 						int idx = i - 1;
 
-						while (in_arr[idx][j] == 0) { // ºñ±³ÇÒ °ªÀÌ 0ÀÌ¸é ´ÙÀ½°ª
-							if (idx == 0) // ³¡±îÁö Å½»ö
+						while (in_arr[idx][j] == 0) { // ë¹„êµí•  ê°’ì´ 0ì´ë©´ ë‹¤ìŒê°’
+							if (idx == 0) // ëê¹Œì§€ íƒìƒ‰
 								break;
 							idx--;
 						}
 
-						if (in_arr[idx][j] == 0) // ºñ±³ÇÒ °ªÀÌ 0ÀÌ¸é ÆĞ½º
+						if (in_arr[idx][j] == 0) // ë¹„êµí•  ê°’ì´ 0ì´ë©´ íŒ¨ìŠ¤
 							continue;
 
-						if (in_arr[i][j] == in_arr[idx][j]) { // ÇÕÄ¡°í Áö¿ì°í
+						if (in_arr[i][j] == in_arr[idx][j]) { // í•©ì¹˜ê³  ì§€ìš°ê³ 
 							in_arr[i][j] += in_arr[i][j];
 							in_arr[idx][j] = 0;
 							i = idx;
 						}
 					}
 					int cur = N - 1; // ??
-					for (int i = N - 1; i > 0; i--) { // °á°ú ÀÔ·Â
+					for (int i = N - 1; i > 0; i--) { // ê²°ê³¼ ì…ë ¥
 						if (in_arr[i][j] != 0) {
 							out_arr[cur--][j] = in_arr[i][j];
 						}
@@ -95,30 +95,30 @@ public class Solution_6109_¹®¼­ºó {
 				break;
 
 			case "left":
-				for (int i = 0; i < N; i++) { // Çà ¿ì¼± Å½»ö
-					for (int j = 0; j < N - 1; j++) { // À§ºÎÅÍ ¾Æ·¡·Î
-						if (in_arr[i][j] == 0) // ÇöÀç °ªÀÌ 0ÀÌ¸é ÆĞ½º
+				for (int i = 0; i < N; i++) { // í–‰ ìš°ì„  íƒìƒ‰
+					for (int j = 0; j < N - 1; j++) { // ìœ„ë¶€í„° ì•„ë˜ë¡œ
+						if (in_arr[i][j] == 0) // í˜„ì¬ ê°’ì´ 0ì´ë©´ íŒ¨ìŠ¤
 							continue;
 
 						int idx = j + 1;
 
-						while (in_arr[i][idx] == 0) { // ºñ±³ÇÒ °ªÀÌ 0ÀÌ¸é ´ÙÀ½°ª
-							if (idx == N - 1) // ³¡±îÁö Å½»ö
+						while (in_arr[i][idx] == 0) { // ë¹„êµí•  ê°’ì´ 0ì´ë©´ ë‹¤ìŒê°’
+							if (idx == N - 1) // ëê¹Œì§€ íƒìƒ‰
 								break;
 							idx++;
 						}
 
-						if (in_arr[i][idx] == 0) // ºñ±³ÇÒ °ªÀÌ 0ÀÌ¸é ÆĞ½º
+						if (in_arr[i][idx] == 0) // ë¹„êµí•  ê°’ì´ 0ì´ë©´ íŒ¨ìŠ¤
 							continue;
 
-						if (in_arr[i][j] == in_arr[i][idx]) { // ÇÕÄ¡°í Áö¿ì°í
+						if (in_arr[i][j] == in_arr[i][idx]) { // í•©ì¹˜ê³  ì§€ìš°ê³ 
 							in_arr[i][j] += in_arr[i][j];
 							in_arr[i][idx] = 0;
 							j = idx;
 						}
 					}
 					int cur = 0;
-					for (int j = 0; j < N; j++) { // °á°ú ÀÔ·Â
+					for (int j = 0; j < N; j++) { // ê²°ê³¼ ì…ë ¥
 						if (in_arr[i][j] != 0) {
 							out_arr[i][cur++] = in_arr[i][j];
 						}
@@ -127,30 +127,30 @@ public class Solution_6109_¹®¼­ºó {
 				break;
 
 			case "right":
-				for (int i = 0; i < N; i++) { // Çà ¿ì¼± Å½»ö
-					for (int j = N - 1; j > 0; j--) { // ¿À¸¥ÂÊºÎÅÍ ¿ŞÂÊÀ¸·Î
-						if (in_arr[i][j] == 0) // ÇöÀç °ªÀÌ 0ÀÌ¸é ÆĞ½º
+				for (int i = 0; i < N; i++) { // í–‰ ìš°ì„  íƒìƒ‰
+					for (int j = N - 1; j > 0; j--) { // ì˜¤ë¥¸ìª½ë¶€í„° ì™¼ìª½ìœ¼ë¡œ
+						if (in_arr[i][j] == 0) // í˜„ì¬ ê°’ì´ 0ì´ë©´ íŒ¨ìŠ¤
 							continue;
 
 						int idx = j - 1;
 
-						while (in_arr[i][idx] == 0) { // ºñ±³ÇÒ °ªÀÌ 0ÀÌ¸é ´ÙÀ½°ª
-							if (idx == 0) // ³¡±îÁö Å½»ö
+						while (in_arr[i][idx] == 0) { // ë¹„êµí•  ê°’ì´ 0ì´ë©´ ë‹¤ìŒê°’
+							if (idx == 0) // ëê¹Œì§€ íƒìƒ‰
 								break;
 							idx--;
 						}
 
-						if (in_arr[idx][j] == 0) // ºñ±³ÇÒ °ªÀÌ 0ÀÌ¸é ÆĞ½º
+						if (in_arr[idx][j] == 0) // ë¹„êµí•  ê°’ì´ 0ì´ë©´ íŒ¨ìŠ¤
 							continue;
 
-						if (in_arr[i][j] == in_arr[i][idx]) { // ÇÕÄ¡°í Áö¿ì°í
+						if (in_arr[i][j] == in_arr[i][idx]) { // í•©ì¹˜ê³  ì§€ìš°ê³ 
 							in_arr[i][j] += in_arr[i][j];
 							in_arr[i][idx] = 0;
 							j = idx;
 						}
 					}
 					int cur = N - 1; // ??
-					for (int j = N - 1; j > 0; j--) { // °á°ú ÀÔ·Â
+					for (int j = N - 1; j > 0; j--) { // ê²°ê³¼ ì…ë ¥
 						if (in_arr[i][j] != 0) {
 							out_arr[i][cur--] = in_arr[i][j];
 						}
