@@ -1,11 +1,11 @@
-package bfs_dfs;
+package 연산자끼워넣기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 연산자끼워넣기 {
+public class 연산자끼워넣기_장희주 {
 	
 	//수의 개수
 	static int n;
