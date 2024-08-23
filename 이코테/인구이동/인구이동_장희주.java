@@ -1,10 +1,10 @@
-package bfs_dfs;
+package 인구이동;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class 인구이동 {
+public class 인구이동_장희주 {
     
     static class Node {
         int x, y;

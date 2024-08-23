@@ -1,11 +1,11 @@
-package bfs_dfs;
+package 연구소;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class 연구소 {
+public class 연구소_장희주 {
 
     static int n, m; // 배열의 크기
     static int[][] array; // 원본 맵

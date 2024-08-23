@@ -1,4 +1,4 @@
-package 정렬;
+package 국영수;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,7 +8,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class 국영수 {
+public class 국영수_장희주 {
 	
 	static class Student{
 		String name;
