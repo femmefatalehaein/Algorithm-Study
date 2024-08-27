@@ -1,4 +1,4 @@
-package 이진탐색;
+package 떡볶이떡만들기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class 떡볶이떡만들기 {
+public class 떡볶이떡만들기_장희주 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
