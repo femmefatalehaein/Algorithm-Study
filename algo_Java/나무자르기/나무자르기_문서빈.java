@@ -3,7 +3,7 @@ package algo_Java;
 import java.util.*;
 import java.io.*;
 
-public class ³ª¹«ÀÚ¸£±â_¹®¼­ºó {
+public class ë‚˜ë¬´ìë¥´ê¸°_ë¬¸ì„œë¹ˆ {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -21,17 +21,17 @@ public class ³ª¹«ÀÚ¸£±â_¹®¼­ºó {
 			// tree[i] = Integer.parseInt(st.nextToken());
 			tree[i] = in.nextInt();
 
-			if (max < tree[i]) { // ÀÔ·Â¹ŞÀº ³ª¹«°¡ maxº¸´Ù Å¬ °æ¿ì max°ªÀ» ÇØ´ç ³ª¹« ³ôÀÌ·Î °»½Å
+			if (max < tree[i]) { // ì…ë ¥ë°›ì€ ë‚˜ë¬´ê°€ maxë³´ë‹¤ í´ ê²½ìš° maxê°’ì„ í•´ë‹¹ ë‚˜ë¬´ ë†’ì´ë¡œ ê°±ì‹ 
 				max = tree[i];
 			}
 		}
 
-		// ÀÌºĞ Å½»ö
+		// ì´ë¶„ íƒìƒ‰
 		while (min < max) {
 			int mid = (min + max) / 2;
 			long sum = 0;
-			for (int treeH : tree) { // tree Àß¸° ±æÀÌ = tree ³ôÀÌ - ÀÚ¸£´Â À§Ä¡(mid)
-										// 0 ÀÌÇÏÀÇ ¼ö´Â ÇÕ»êÇÏÁö ¾Ê´Â´Ù.
+			for (int treeH : tree) { // tree ì˜ë¦° ê¸¸ì´ = tree ë†’ì´ - ìë¥´ëŠ” ìœ„ì¹˜(mid)
+			// 0 ì´í•˜ì˜ ìˆ˜ëŠ” í•©ì‚°í•˜ì§€ ì•ŠëŠ”ë‹¤.
 				if (treeH - mid > 0) {
 					sum += (treeH - mid);
 				}
