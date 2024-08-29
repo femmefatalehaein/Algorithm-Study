@@ -31,25 +31,13 @@ public class 고정점찾기_장희주 {
 		while(start<=end) {
 			//중간값
 			int mid=(start+end)/2;
-			//값이 음수일때
-			if(nums[mid]<0) {
-				//중간값 +1 해주기
-				mid=(start+end)/2 +1;
-				//끝점과 시작점이 중간값과 같을 때 반복문 그만
-				if(end==mid || start==mid) {
-					break;
-				}
-			}
 			//왼쪽
 			if(mid<nums[mid]) {
-				//양수값일때
-				if(nums[mid]>=0) {
 					
-					end=mid;
-				}
+					end=mid-1;
 			//오른쪽
 			}else if(mid>nums[mid]) {
-				start=mid;
+				start=mid+1;
 				continue;
 			//인덱스값과 값이 같을때
 			}else if(mid==nums[mid]){
