@@ -1,6 +1,6 @@
 *.class
 .gitignore
 .metadata
-.classpath
-.project
-.settings
+*.classpath
+*.project
+*.settings

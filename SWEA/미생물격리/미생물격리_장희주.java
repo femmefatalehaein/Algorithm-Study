@@ -1,4 +1,5 @@
-package SWEA;
+package 미생물격리;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class 미생물격리 {
+public class 미생물격리_장희주 {
 
 	static class Node {
 		int x; // 세로
