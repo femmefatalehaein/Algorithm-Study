@@ -1,0 +1,41 @@
+# Eclipse 관련 파일들
+.classpath
+.project
+.settings/
+
+# IntelliJ 관련 파일들
+.idea/
+*.iml
+
+# 빌드 파일
+bin/
+build/
+out/
+
+# Gradle 관련 파일들
+.gradle/
+build/
+
+# Maven 관련 파일들
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+dependency-reduced-pom.xml
+release.properties
+
+# 로그 파일들
+*.log
+
+# OS별 파일들
+.DS_Store
+Thumbs.db
+
+# 기타
+*.class
+*.jar
+*.war
+*.ear
+
+# 환경 설정 파일
+*.env
