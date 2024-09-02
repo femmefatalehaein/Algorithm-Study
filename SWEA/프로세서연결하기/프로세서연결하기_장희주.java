@@ -1,4 +1,4 @@
-
+package 프로세서연결하기;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
 
-public class Solution_1767_장희주 {
+public class 프로세서연결하기_장희주 {
 
 	static class Node {
 		int x;
