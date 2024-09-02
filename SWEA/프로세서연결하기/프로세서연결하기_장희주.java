@@ -1,3 +1,4 @@
+package 프로세서연결하기2;
 
 import java.io.BufferedReader;
 import java.io.IOException;

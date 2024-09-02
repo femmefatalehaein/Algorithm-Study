@@ -1,12 +1,9 @@
-package D_0827;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
-
-
 
 public class Solution_1767_김가연 {
 	
