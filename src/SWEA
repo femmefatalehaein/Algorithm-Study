@@ -1,0 +1,71 @@
+package SWEA;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Solution_10966 {
+    static int N, M, totalDistance;
+    static int[] dx = {-1, 1, 0, 0};
+    static int[] dy = {0, 0, -1, 1};
+    static char[][] map;
+    static boolean[][] visited;// 방문 여부 체크 -> 필요 없을듯
+
+    public static void main(String[] args) throws IOException {
+        System.setIn(Files.newInputStream(Paths.get("./src/res/input_10966.txt")));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+        StringBuilder sb = new StringBuilder();
+        int T = Integer.parseInt(br.readLine());
+        for (int tc = 1; tc <= T; tc++) {
+            st = new StringTokenizer(br.readLine());
+            N = Integer.parseInt(st.nextToken());
+            M = Integer.parseInt(st.nextToken());
+            map = new char[N][M];
+            for (int i = 0; i < N; i++) {
+                map[i] = br.readLine().toCharArray();
+            }
+            totalDistance = 0;
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < M; j++) {
+                    if (map[i][j] == 'W') continue; // 물이면 제끼고
+                    bfs(i,j);   // 땅일 땐 bfs 돌려주고
+                }
+            }
+            sb.append("#").append(tc).append(" ").append(totalDistance).append("\n");
+        }
+        System.out.println(sb);
+    }
+
+    static void bfs(int x, int y) {
+        Queue<int[]> queue = new ArrayDeque<>();
+        queue.offer(new int[]{x, y, 0});    // 누적할 점수도 보내주기
+        int cnt;
+        while (!queue.isEmpty()) {  // queue 도는데
+            int[] point = queue.poll();
+            for (int d = 0; d < 4; d++) {
+                int nx = dx[d] + point[0];  // x 방향
+                int ny = dy[d] + point[1];  // y방향
+                cnt = point[2];
+                // 사방 체크
+                if (nx < 0 || ny < 0 || nx >= N || ny >= M) continue;
+                // 땅이면
+                if (map[nx][ny] == 'L') {
+                    cnt++;
+                }
+                if (map[nx][ny] == 'W') {   // 물이면?
+                    cnt ++;
+                    totalDistance += cnt;
+//                    break;  // break 로 탈출하는 범위까진 한번 확인 해봐야지
+                    return;
+                }
+                queue.offer(new int[]{nx, ny, cnt}); // 안돌아간 좌표 보내주기, 재귀가 아니니까 cnt 보내줄 필요 없다
+            }
+        }
+    }
+}
