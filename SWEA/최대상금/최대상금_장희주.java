@@ -1,7 +1,8 @@
 package 최대상금;
+
 import java.util.*;
 
-public class 최대상금_HashSet_장희주 {
+public class 최대상금_장희주 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
