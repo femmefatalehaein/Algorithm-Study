@@ -1,9 +1,11 @@
+package 등산로조성;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Solution_1949_장희주 {
+public class 등산로조성_장희주 {
 
 	static class Node {
 		int x, y, value;
