@@ -1,5 +1,7 @@
 package SWEA.D_0906;
 
+// 백준 https://www.acmicpc.net/problem/10026
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
